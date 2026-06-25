@@ -1,6 +1,10 @@
 import streamlit as st
 import joblib
 
+import nltk
+
+nltk.download('punkt_tab')
+
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 import nltk
