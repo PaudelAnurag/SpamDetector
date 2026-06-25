@@ -6,10 +6,26 @@ from nltk.stem import PorterStemmer
 import nltk
 
 # Load model
+import joblib
 
-vectors = joblib.load(open("../reports/models/vectors.pkl", "rb"))
-model = joblib.load(open("../reports/models/model.pkl", "rb"))
+# Method 1
+try:
+    vectors = joblib.load("reports/models/vectors.pkl")
+    model = joblib.load("reports/models/model.pkl")
+    print("Method 1: SUCCESS")
+except Exception as e:
+    print("Method 1: FAILED")
+    print(e)
 
+# Method 2
+try:
+    vectors = joblib.load(open("../reports/models/vectors.pkl", "rb"))
+    model = joblib.load(open("../reports/models/model.pkl", "rb"))
+    print("Method 2: SUCCESS")
+except Exception as e:
+    print("Method 2: FAILED")
+    print(e)
+    
 # Preprocess
 
 def transform(text):
