@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn
+joblib
+python-dotenv
+nltk
+streamlit
+streamlit-keyup
+seaborn
+matplotlib
+wordcloud
+xgboost
+lightgbm
